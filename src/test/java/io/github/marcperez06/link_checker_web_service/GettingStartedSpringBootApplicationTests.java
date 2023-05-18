@@ -1,4 +1,4 @@
-package com.example.gettingstartedspringboot;
+package io.github.marcperez06.link_checker_web_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
