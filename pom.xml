@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.0.5</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	
+	<groupId>io.github.marcperez06</groupId>
+	<artifactId>link-checker-web-service</artifactId>
+	<version>0.0.1</version>
+	<packaging>war</packaging>
+	
+	<name>link-checker-web-service</name>
+	<description>Web service for link checker</description>
+	<url>http://maven.apache.org</url>
+	
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+	
+	<properties>
+		<java.version>17</java.version>
+		<link.checker.version>0.0.4</link.checker.version>
+		<lombok.version>1.18.26</lombok.version>
+	</properties>
+	
+	<developers>
+		<developer>
+			<id>marcperez06</id>
+			<name>Marc Pérez Rodríguez</name>
+			<url>https://github.com/marcperez06</url>
+			<properties>
+				<github>https://github.com/marcperez06</github>
+				<gitlab>https://gitlab.com/marcperez06</gitlab>
+			</properties>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/marcperez06/link-checker-web-service.git</connection>
+		<developerConnection>scm:git:ssh://github.com:marcperez06/link-checker-web-service.git</developerConnection>
+		<url>https://github.com/marcperez06/link-checker-web-service</url>
+	</scm>
+	
+	<dependencies>
+	
+		<!-- https://mvnrepository.com/artifact/io.github.marcperez06/java-utilities -->
+		<dependency>
+			<groupId>io.github.marcperez06</groupId>
+			<artifactId>link-checker</artifactId>
+			<version>${link.checker.version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<!--
+		<dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>${lombok.version}</version>
+		</dependency>
+		-->
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
