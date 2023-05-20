@@ -23,10 +23,10 @@ public class LinkCheckerController {
 	@PostMapping(path = "/validation", 
 					consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> validateBody(@RequestBody LinkCheckerParams params) {
-		ResponseEntity<String> response = new ResponseEntity("{}", HttpStatus.OK);
+		ResponseEntity<String> response = new ResponseEntity<String>("{}", HttpStatus.OK);
 		List<LinkCheckerError> errors = LinkCheckerParamsValidator.validate(params);
 		if (ValidationUtils.isNotEmpty(errors)) {
-			response = new ResponseEntity(GsonUtils.getJSON(errors), HttpStatus.BAD_REQUEST);
+			response = new ResponseEntity<String>(GsonUtils.getJSON(errors), HttpStatus.BAD_REQUEST);
 		}
 		return response;
 	}
@@ -38,9 +38,9 @@ public class LinkCheckerController {
 		List<LinkCheckerError> errors = LinkCheckerParamsValidator.validate(params);
 		if (ValidationUtils.isEmpty(errors)) {
 			report = LinkCheckerService.getReport(params.getUrl(), params.getConfigurationWithoutEmptyMinDepth());
-			response = new ResponseEntity(GsonUtils.getJSON(report), HttpStatus.OK);
+			response = new ResponseEntity<String>(GsonUtils.getJSON(report), HttpStatus.OK);
 		} else {
-			response = new ResponseEntity(GsonUtils.getJSON(errors), HttpStatus.BAD_REQUEST);
+			response = new ResponseEntity<String>(GsonUtils.getJSON(errors), HttpStatus.BAD_REQUEST);
 		}
 		return response;
 	}
