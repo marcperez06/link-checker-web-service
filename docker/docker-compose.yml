@@ -3,8 +3,8 @@ services:
   link-checker-web-service:
     container_name: link-checker-web-service
     build:
-      context: link-checker-web-service
-      dockerfile: Dockerfile
+      context: ./..
+      dockerfile: docker/Dockerfile
     image: link-checker-web-service:latest
     ports:
       - 8080:8080
