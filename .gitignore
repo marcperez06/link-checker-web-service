@@ -1,6 +1,6 @@
 HELP.md
 /target/
-!/target/ROOT.war
+!/target/link-checker-web-service.jar
 /dependency-reduced-pom.xml
 .classpath
 .project
@@ -11,8 +11,8 @@ HELP.md
 ##############################
 .mtj.tmp/
 *.class
-*.jar
-#*.war
+#*.jar
+*.war
 *.ear
 *.nar
 hs_err_pid*
