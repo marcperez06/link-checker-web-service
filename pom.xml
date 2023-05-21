@@ -29,7 +29,7 @@
 	
 	<properties>
 		<java.version>1.8</java.version>
-		<link.checker.version>0.0.4</link.checker.version>
+		<link.checker.version>0.0.7</link.checker.version>
 		<lombok.version>1.18.26</lombok.version>
 	</properties>
 	
